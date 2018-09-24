@@ -87,6 +87,56 @@ describe('Questions', () => {
   })
   ```
 
+* `b.hasAClass(class)`
+  <!-- eslint-disable no-undef -->
+  ```js
+  it('confirm the existance of a class container in a DOM', () => {
+      b.hasAClass('container')
+  })
+  ```
+
+* `b.hasAClass(class, selector)`
+  <!-- eslint-disable no-undef -->
+  ```js
+  it('confirm the existance of a class container in a first div to be found in a DOM', () => {
+      b.hasAClass('container', 'div')
+  })
+  ```
+
+* `b.doesNotHaveAClass(class)`
+  <!-- eslint-disable no-undef -->
+  ```js
+  it('confirms that a class container does not exist in a DOM', () => {
+      b.doesNotHaveAClass('containers', 'div')
+  })
+  ```
+
+* `b.doesNotHaveAClass(class, selector)`
+  <!-- eslint-disable no-undef -->
+  ```js
+  it('confirms that a class container does not exist on first div to be found in a DOM', () => {
+      b.doesNotHaveAClass('containers', 'div')
+  })
+  ```
+
+* `b.hasAttribute(attribute, value, selector)`
+  <!-- eslint-disable no-undef -->
+  ```js
+  it('h2 has a class attribute display-4', () => {
+      b.hasAttribute('class', 'display-4', '.container h2')
+  })
+  ```
+
+* `b.doesNotHaveAttribute(attribute, value, selector)`
+  <!-- eslint-disable no-undef -->
+  ```js
+  it('h2 hasn\'t a class attribute display-3', () => {
+      b.doesNotHaveAttribute('class', 'display-3', '.container h2')
+  })
+  ```
+
+
+
 ### INPUT
 * `b.type(text, selector, event)`
   <!-- eslint-disable no-undef -->
@@ -107,7 +157,7 @@ describe('Questions', () => {
   })
   ```
 
-* `b.inputValueIs(text, selector)`
+* `b.inputValueIsNot(text, selector)`
   <!-- eslint-disable no-undef -->
   ```js
   it('does the input value is not this text', () => {
@@ -133,6 +183,7 @@ describe('Questions', () => {
     b.emitted('event')
   })
   ```
+
 * `b.emittedContains(event,data)`
   <!-- eslint-disable no-undef -->
   ```js
